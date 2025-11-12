@@ -44,7 +44,7 @@ Set your variables accordingly:
 IMPORTANT: Do not change this value after first spinning up Docker; a new project will be created with `django-admin startproject ${DJANGO_PROJECT_NAME}` if the named project directory and its settings file do not exist. Alternatively, hardcode your preferred name and remove all instances of the var (recommended for more established projects).
 
 2. `DEBUG`
-   Set `DEBUG=1` for development (default `1`). This is both for Django dev and to direct uvicorn to reload file changes.
+   Set `DEBUG=1` for development (default `1`). This is both for Django dev and to direct gunicorn to reload file changes.
 
 3. `WORKERS`
    Sets the number of worker instances for gunicorn to use when not in dev (default `1`).
