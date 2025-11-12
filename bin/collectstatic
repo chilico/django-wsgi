@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd "$(dirname "$0")/.."
+
+docker exec -it django_web python manage.py collectstatic --noinput --clear

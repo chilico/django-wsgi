@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")/.."
+
+# usage:
+# makemigrations
+# makemigrations api
+# makemigrations -m "add_fields" api
+# makemigrations -e api
+# makemigrations -e -m "custom" api
+
+MESSAGE=""
+EMPTY=""
+APP_NAME=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -m|--message)
+            MESSAGE="--name $2"
+            shift 2
+            ;;
+        -e|--empty)
+            EMPTY="--empty"
+            shift
+            ;;
+        *)
+            APP_NAME="$1"
+            shift
+            ;;
+    esac
+done
+
+docker compose exec django_web python manage.py makemigrations $EMPTY $MESSAGE $APP_NAME

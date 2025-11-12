@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiofiles = "*"
+django = "*"
+djangorestframework = "*"
+gunicorn = "*"
+httpx = "*"
+loguru = "*"
+psycopg = "*"
+psycopg2-binary = "*"
+pydantic = "*"
+pytest = "*"
+pytest-django = "*"
+pytest-env = "*"
+whitenoise = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
