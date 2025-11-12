@@ -4,7 +4,7 @@
 
 This is a Django repo for bootstrapping projects running the WSGI server.
 
-It may act as a template to get a dockerised async Django backend setup quickly.
+It may act as a template to get a dockerised Django backend setup quickly.
 
 ## Architecture
 
