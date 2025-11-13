@@ -78,6 +78,7 @@ There are executable scripts found in the root level `bin`.
 - `makemigrations`: makes Django migrations, excepts args (see script for usage)
 - `migrate`: runs migrations
 - `test`: runs tests
+- `down`: removes main and test containers
 
 Run these from root like a command, e.g.:
 

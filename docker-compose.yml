@@ -28,10 +28,10 @@ services:
       - WORKERS=1
       - BASE_URL=https://localhost:8080
       - DATABASE_URL=postgresql://django:django@django_db:5432/django
+      - POSTGRES_HOST=django_db
       - POSTGRES_NAME=django
       - POSTGRES_USER=django
       - POSTGRES_PASSWORD=django
-      - POSTGRES_HOST=django_db
       - POSTGRES_PORT=5432
     env_file:
       - .env
