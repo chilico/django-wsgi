@@ -3,15 +3,12 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.status import HTTP_503_SERVICE_UNAVAILABLE, HTTP_200_OK
 
-from utils.logging import logger
-
 
 @api_view(["GET"])
 def healthcheck(request):
     """
     Health check endpoint to verify service and database connectivity.
     """
-    logger.info(request)
     try:
         with connection.cursor() as cursor:
             cursor.execute("SELECT 1")
