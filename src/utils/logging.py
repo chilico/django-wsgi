@@ -70,6 +70,3 @@ def configure(
             gunicorn_logger = logging.getLogger(logger_name)
             gunicorn_logger.handlers = [InterceptHandler()]
             gunicorn_logger.propagate = False
-
-
-configure()

@@ -106,6 +106,6 @@ REST_FRAMEWORK = {
 }
 
 # import at the end to ensure all settings are loaded first
-from project.logging import configure as configure_logging
+from utils.logging import configure as configure_logging
 
 configure_logging(intercept_django=True, intercept_gunicorn=True)
